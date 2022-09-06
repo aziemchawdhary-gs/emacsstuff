@@ -112,7 +112,7 @@
 ;; formats the buffer before saving
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
- (require 'web-mode)
+(use-package web-mode)
 
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
   (add-hook 'web-mode-hook
@@ -122,3 +122,31 @@
 
   ;; enable typescript - tslint checker
   (flycheck-add-mode 'typescript-tslint 'web-mode)
+
+(use-package elfeed
+    :ensure t
+    :config
+    (setq elfeed-db-directory (expand-file-name "elfeed" user-emacs-directory)
+          elfeed-show-entry-switch 'display-buffer)
+    :bind
+    ("C-x w" . elfeed ))
+(use-package elfeed-org
+    :ensure t
+    :config
+    (elfeed-org)
+    (setq rmh-elfeed-org-files (list "/home/aziem/.emacs.d/elfeed.org")))
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(elfeed-org elfeed web-mode evil yasnippet which-key use-package tide projectile magit lsp-ui lsp-java js2-mode helm-lsp evil-surround editorconfig company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -1,0 +1,5 @@
+* Arxiv                                                        :elfeed:arxiv:
+** [[http://export.arxiv.org/api/query?search_query=cat:cs.PL&start=0&max_results=300&sortBy=submittedDate&sortOrder=descending][cs.PL]]                                                                 :pl:
+** [[http://export.arxiv.org/api/query?search_query=cat:cs.LO&start=0&max_results=300&sortBy=submittedDate&sortOrder=descending][cs.LO]]                                                                 :lo:
+** [[http://export.arxiv.org/api/query?search_query=cat:cs.DB&start=0&max_results=300&sortBy=submittedDate&sortOrder=descending][cs.DB]]                                                                 :db:
+** [[http://export.arxiv.org/api/query?search_query=cat:cs.SE&start=0&max_results=300&sortBy=submittedDate&sortOrder=descending][cs.SE]]                                                                 :se:
